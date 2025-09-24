@@ -1,0 +1,268 @@
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main Container */
+.main-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+}
+
+/* Habit Item Styles */
+.habit-item {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.habit-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: #4facfe;
+}
+
+.habit-header {
+    padding: 20px;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.habit-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.habit-controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* Day Grid Styles */
+.day-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 20px;
+}
+
+.day-cell {
+    aspect-ratio: 1;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.day-cell:hover {
+    border-color: #4facfe;
+    transform: scale(1.05);
+}
+
+.day-cell.completed {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    border-color: #11998e;
+    color: white;
+}
+
+.day-cell.today {
+    border-color: #ff6b6b;
+    border-width: 3px;
+}
+
+/* Streak Info Styles */
+.streak-info {
+    padding: 10px 20px;
+    background: #f1f3f4;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+}
+
+.streak-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Progress Bar Styles */
+.progress-bar-custom {
+    height: 8px;
+    border-radius: 4px;
+    background: #e9ecef;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+/* Form Styles */
+.add-habit-form {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.add-habit-form:hover {
+    border-color: #4facfe;
+    background: #f0f8ff;
+}
+
+/* Button Styles */
+.btn-custom {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+    color: white;
+}
+
+.btn-danger-custom {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 6px;
+    font-size: 0.85em;
+}
+
+.btn-secondary-custom {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 6px;
+    font-size: 0.85em;
+}
+
+/* Stats Container */
+.stats-container {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 15px;
+}
+
+.stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #4facfe;
+}
+
+.stat-label {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .day-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .habit-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .add-habit-form .row .col-md-8,
+    .add-habit-form .row .col-md-4 {
+        margin-bottom: 10px;
+    }
+    
+    .stats-container .row {
+        text-align: center;
+    }
+    
+    .stat-number {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-container {
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    .header {
+        padding: 20px;
+        border-radius: 15px 15px 0 0;
+    }
+    
+    .header h1 {
+        font-size: 1.5em;
+    }
+    
+    .day-grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 15px;
+    }
+    
+    .day-cell {
+        font-size: 0.7em;
+    }
+    
+    .add-habit-form {
+        padding: 20px;
+    }
+    
+    .streak-info {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

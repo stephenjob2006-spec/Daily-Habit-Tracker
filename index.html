@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Habit Tracker</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-container">
+            <div class="header">
+                <h1><i class="fas fa-chart-line me-3"></i>Daily Habit Tracker</h1>
+                <p class="mb-0">Build better habits, track your progress, achieve your goals!</p>
+            </div>
+            
+            <div class="p-4">
+                <!-- Stats Overview -->
+                <div class="stats-container">
+                    <div class="row">
+                        <div class="col-md-3 stat-item">
+                            <div class="stat-number" id="totalHabits">0</div>
+                            <div class="stat-label">Total Habits</div>
+                        </div>
+                        <div class="col-md-3 stat-item">
+                            <div class="stat-number" id="completedToday">0</div>
+                            <div class="stat-label">Completed Today</div>
+                        </div>
+                        <div class="col-md-3 stat-item">
+                            <div class="stat-number" id="longestStreak">0</div>
+                            <div class="stat-label">Longest Streak</div>
+                        </div>
+                        <div class="col-md-3 stat-item">
+                            <div class="stat-number" id="completionRate">0%</div>
+                            <div class="stat-label">This Week</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add Habit Form -->
+                <div class="add-habit-form">
+                    <h4><i class="fas fa-plus-circle me-2"></i>Add New Habit</h4>
+                    <div class="row mt-3">
+                        <div class="col-md-8">
+                            <input type="text" id="habitNameInput" class="form-control" placeholder="Enter habit name (e.g., Exercise, Read, Drink Water)">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-custom w-100" onclick="addHabit()">
+                                <i class="fas fa-plus me-2"></i>Add Habit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Control Buttons -->
+                <div class="text-center mb-4">
+                    <button class="btn btn-danger-custom me-2" onclick="clearAllData()">
+                        <i class="fas fa-trash me-1"></i>Clear All Data
+                    </button>
+                    <button class="btn btn-secondary-custom" onclick="resetThisWeek()">
+                        <i class="fas fa-undo me-1"></i>Reset This Week
+                    </button>
+                </div>
+                
+                <!-- Habits Container -->
+                <div id="habitsContainer">
+                    <!-- Habits will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
