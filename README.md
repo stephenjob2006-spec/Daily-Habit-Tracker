@@ -2,6 +2,8 @@
 
 A modern, responsive web-based habit tracking application that helps users build better habits and visualize their progress over time. Track daily activities like exercise, reading, drinking water, and more with an intuitive interface and powerful analytics.
 
+Live Demo: [Click Here](https://stephenjob2006-spec.github.io/Daily-Habit-Tracker/)
+
 ![Habit Tracker Preview](/demo.png)
 
 ## 🌟 Features
